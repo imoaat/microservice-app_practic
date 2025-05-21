@@ -11,3 +11,7 @@ class RedisTools:
     @classmethod
     def get_pair(cls, pair):
         return cls.__redis_connect.get(pair)
+
+    @classmethod
+    def get_keys(cls):
+        return cls.__redis_connect.keys(pattern='*')
