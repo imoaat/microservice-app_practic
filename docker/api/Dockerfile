@@ -7,4 +7,7 @@ WORKDIR /usr/src/app
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBEFFERED 1
 
+RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
+
+COPY . /usr/src/app/
