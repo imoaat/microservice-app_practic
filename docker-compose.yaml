@@ -28,3 +28,13 @@ services:
 
   redis:
     container_name: redis
+    build:
+      context: .
+      dockerfile: docker/redis/Dockerfile
+
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+
+    ports:
+      - 6379:6379
