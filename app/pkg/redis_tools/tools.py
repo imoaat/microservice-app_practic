@@ -13,5 +13,9 @@ class RedisTools:
         return cls.__redis_connect.get(pair)
 
     @classmethod
+    def ger_all_pairs(cls):
+        return cls.__redis_connect.keys()
+
+    @classmethod
     def get_keys(cls):
         return cls.__redis_connect.keys(pattern='*')
