@@ -10,3 +10,7 @@ async def start_handler(message: Message):
 @router.message(commands=["help"])
 async def help_handler(message: Message):
     await message.answer("/alert BTCUSDT 67000 выше — создать алерт\n/my_alerts — список алертов\n/delete_alert 1 — удалить")
+
+@router.message(commands=["/alert"])
+async def help_handler(message: Message):
+    await message.answer("/alert message received")
